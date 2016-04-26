@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.0/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.0/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<article xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+    <info>
+        <title>XML, blockchain and regulatory reporting in the world of finance</title>
+        <subtitle>Combining the strengths and weaknesses of mature and modern technologies to drive innovation and regulatory compliance</subtitle>
+        <author>
+            <personname>
+                <firstname>Lech</firstname>
+                <surname>Rzedzicki</surname>
+            </personname>
+        </author>
+        <abstract>
+            <para>The regulatory burden for financial institutions makes it a hard environment to innovate, yet the unfavourable market conditions mean that banks must adopt latest technologies to cut costs and keep up with the market demands.</para>
+            <para>This paper aims to show a technical proof of concept of how to combine the seemingly opposite goals using a combination of tried and tested XML technologies such as XSLT and Schematron in conjunction with experimental distributed ledged technology to drive both regulatory compliance and implement innovative features such as inter-bank trade settlemnt using blockchain technology. </para>
+            
+        </abstract>
+    </info>
+    <section>
+        <title>Background</title>
+        <section>
+            <title>XML in regulatory reporting</title>
+            <para>XML 1.0 is by now a very mature standard. As most of the audience will know, the standard hasn't changed in 20 years. XML 1.1 hasn't been widely adopted and no one is contemplating XML 2.0 to replace XML 1.0 anytime soon.</para>
+            <para>The strenght of that is stability, great tool support, human readability and the reach.</para>
+            <para>This means XML still is, probably more than before, a good archival and reporting markup. Worst case scenario is someone will open it in 20 years time in a text editor and it will still be readable.</para>
+            <para>Enter the magical world of finance where common sense quickly disappears and is
+                replaced by exotic, derivative products such as index variance swaps, whose main
+                goal is to depart the client from their money.</para>
+            <para>It is hard to prove whether the complex financial product were engineered as a way
+                to improve the bottom line of financial institutions or are they truly filling a
+                market need for the clients such as shielding them from volatility of the equities
+                markets or commodity prices.</para>
+            <para>What is universally true however is that the products are complex and it is often hard to figure out who is exposed to risks and to what extent.</para>
+            <para>As a result various regulatory bodies, such as the FCA have started requiring more and more reporting on the trades, positions and risks.</para>
+            <para>As it happens XML is a great fit for this purpose and XML (and more specifically XML standard called FpML) has been a de facto standard for regulatory reporting to the extent that the regulatory bodies require that the reporting be done in XML</para>
+            <para>Regulatory reporting is one of the major considerations and driving forces for any established or upcoming financial organisations in 2016.</para>
+            
+        </section>
+        <section>
+            <title>Fintech innovation and blockchain</title>
+            <para>Another trend in 2016 is the need to radically disrupt or reinvent and optimise financial services institutions.</para>
+            <para>Even armed with a full suite of exotic financial products and masses of individual and institutional clients, in an era of negative interest rates and fierce competition from non-traditional players such as supermarkets and tech companies, financial institutions find that a combination of low yields and high regulatory costs make it impossible to retain status quo and still provide sufficient returns back to clients and shareholders.</para>
+            <para>Executives in financial institutions are desperately looking for solutions and for many they have found the holy grail by the name of blockchain.</para>
+            <para>Originally devised by the mysterious Satoshi Nakamoto for the purposes of using with bitcoin, the concept of a distributed ledger is a powerful one.</para>
+            <para>Blockchain or distributed ledger uses solid and well known cryptography around factoring large prime numbers to make it hard to calculate and verify transactions on the ledger and mathematically nearly impossible to alter them by any single contributor.</para>
+            <para>By now the technology has enjoyed a massive wave of early adopter hype and
+                financial institution have been heavenly looking at using it for trade settlement
+                and smart contracts.</para>
+            <para>A single project called r3cev alone has gathered over 40 international financial
+                institutions and has recently completed the early tests with 11 of them.</para>
+            <para>it is therefore an excellent example of an innovative technology that many financial institutions would like to try and we will be using it in the paper to showcase how innovation, XML and regulatory reporting can play together nicely.</para>
+        </section>
+   
+
+    </section>
+    <section>
+        <title>Escape velocity for financial institutions</title>
+        <para>To many inside and outside the finance industry, the suffocating combination of a low yielding market and the burden of regulatory reporting may feel like a fatality combo from Mortal Combat.</para>
+        <para>It isn't and like many combos in fighting games it can be blocked or better yet countered.</para>
+        <para>What this paper describes is a proof of concept technical solution to solve two seemingly opposite problems - use tried and tested XML technologies to solve compliance issues for financial institutions while at the same time allow for innovative technologies such as distributed ledger to be used alongside.</para>
+        <section>
+            <title>Thesis</title>
+            <para>XML is a very mature and stable standard. It has built a great ecosystem of technologies that enable financial institutions to reliably solve their regulatory reporting requirements.</para>
+            <para>XML does allow mixing in with modern ideas such as distributed ledger or modern
+                DevOps stacks such as Docker and modern noSQL solutions such as Marklogic and in
+                fact makes it easy to do so, thanks to a few surrounding standards such as XPath,
+                XSLT, Xquery or Schematron.</para>
+            <para>The aim of this presentation is to show that XML is a great fit for financial
+                institutions to deliver both the business as usual activities such as regulatory
+                reporting and to explore new areas such as distributed ledger at the same
+                time.</para>
+        </section>
+    </section>
+    
+    <section>
+        <title>Technical Description</title>
+        <para>This section describes a sample journey of a financial transaction - a client requests
+            FX swap between a client and a bank, the bank executes the transaction, which is then
+            published to the distributed ledger and the authenticity is jointly verified on the
+            distributed ledger by the client, bank and the regulatory body.</para>
+        <para>To best illustrate this, there are three separate instances running blockchain - one
+            for the client, one for the bank and one for an imaginary regulatory body called the
+            Fictional Compliance Authority.</para>
+        <para>We aim to show how to add a transaction, how to sign it, add it to the blockchain, how
+            to prove the authenticity of a given transaction, how to run a few basic tests for the
+            correctness of the message (using Schematron), what happens when a bank or a rogue party
+            tries to falsify data on a blockchain and finally showcase a few good use case where XML
+            technologies show their strengths - transforming from raw CSV input to FpML,
+            transforming from FpML to a hash and plain text ledger, generating reports and
+            graphs.</para>
+        <section>
+            <title>Infrastructure</title>
+            <para>Financial institutions have stringent requirements about robustness of the
+                infrastructure. As result they often go for the tried and tested technology as
+                opposed to the cutting edge. Our early proof of concept was a setup of Docker
+                containers running Python code + open source database. None of that proved to be a
+                good fit and the following setup more accurately depicts the needs and wants of the
+                IT managers at the financial institutions that we talked to:</para>
+            <itemizedlist>
+                <listitem><para>A Virtual Machine running Linux. No special requirements here, as long as the Operating System is capable or running Java</para>
+                    <para></para></listitem>
+                <listitem><para></para></listitem>
+            </itemizedlist>
+        </section>
+    </section>
+</article>
