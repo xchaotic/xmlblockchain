@@ -99,10 +99,22 @@
                 good fit and the following setup more accurately depicts the needs and wants of the
                 IT managers at the financial institutions that we talked to:</para>
             <itemizedlist>
-                <listitem><para>A Virtual Machine running Linux. No special requirements here, as long as the Operating System is capable or running Java</para>
-                    <para></para></listitem>
-                <listitem><para></para></listitem>
+                <listitem><para>Digital Ocean Virtual Machines running CentOS Linux. No special requirements here, as long as the Operating System is capable or running Java</para>
+                    <para>Possible environment where this proof of concept can run (with slight modifications): raw Linux Debian or Ubuntu, Linux on top of Docker, Amazon AWS, Azure etc.</para></listitem>
+                <listitem><para>Java Runtime Environment 8. We opted for Oracle as this caused least amount of problems and mimics the bank environments that we know of. We are not using any specific version 8 features so this could be downgraded to version 6.</para></listitem>
+                <listitem><para>Marklogic. It is being described as the enterprise noSQL database, has excellent XML technologies support, has replication features that we need to implement anyway. Having said that, is it possible to use another data persistence mechanism, with additional work.</para></listitem>
+                
             </itemizedlist>
+            <para>We chose to run three nodes: chain1.kode1100.com, chain2.kode1100.com and
+                chain3.kode1100.com to represent three types of institutions - someone initiating a
+                transaction (the client), someone facilitating, executing, and reporting the
+                transaction (the bank), and an independent regulatory body which we called FCA
+                (Fictional Compliance Authority).</para>
+            <para>To simplify these will be referred to as node 1-3 or client, bank and FCA
+                respectively.</para>
+            <para>The minimum setup is a single node and there is no theoretical limit to the
+                maximum amount of nodes, although some steps, such as reaching consensus within the
+                network will take longer as the network size increases.</para>
         </section>
     </section>
 </article>
