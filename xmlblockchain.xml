@@ -52,6 +52,127 @@
                 institutions and has recently completed the early tests with 11 of them.</para>
             <para>it is therefore an excellent example of an innovative technology that many financial institutions would like to try and we will be using it in the paper to showcase how innovation, XML and regulatory reporting can play together nicely.</para>
         </section>
+        <section>
+            <title>Distributed ledgers history</title>
+            <para>Ledgers have been used throughout human history, from Sumerian records of harvests and crop usage 4500 years ago through to the tracking of bad debts by the Medici bank in the 14th and 15th Century. Today’s modern double-entry ledgers can trace their roots back to early Islamic records in 7th Century and were first publicly codified in Venice in 1494 by Friar Luca Pacioli based on the practice of Venetian merchants of the Renaissance.  Distributed ledgers represent the next evolution of these devices.</para>
+            
+        </section>
+        <section>
+            <title>What is a distributed ledger?</title>
+            <para>A distributed ledger is essentially an asset database that can be shared across a network of multiple sites, geographies or institutions. All participants within a network can have their own identical copy of the ledger and any changes to the ledger are reflected in all copies in minutes, or in some cases, seconds.  The security and accuracy of the assets stored in the ledger are maintained cryptographically through the use of ‘keys’ and signatures to control who can do what within the shared ledger. Entries can also be updated by one, some or all of the participants, according to rules agreed by the network.</para>
+            <para>It is important to understand that typically the design is such that you can only add new entries to the ledger and can not remove previous entries. If you wish to amend entries, you add a new, cerrected entry and a reference the old one.
+            </para>
+            <para>This also means that the ledger, whether it is stored as a file or in a database, will grow over time which is both a strength and a weakness. t makes it almost impossible to falsify previously added information, but it also makes it hard when you truly need to change the information – a person changes name, or there was any other factual error when entering the information on the blockchain.</para>
+        </section>
+        <section>
+            <title>What can you use distributed ledgers for?</title>
+            <para>There are three core use cases where distributed ledgers can be used:</para>
+            <itemizedlist>
+                <listitem><para>Distributed ledgers can be used to secure an enormous range and type of value transactions – from simple money transfers, of which bitcoin provides the best exemplar, to complex registration of asset ownership and transfer such as in the financial services industry.</para></listitem>
+                <listitem><para>Distributed ledgers can be used to provably convey trust between parties and verify provenance, reputation or competence – certification of university qualifications, the status of components within a complex supply chain such as an aircraft engine manufacture.</para></listitem>
+                <listitem><para>Distributed ledger can serve as the backend execution environment, a distributed "computer in the cloud", where algorithms are executed on the blockchain rather than on any particular machine.</para></listitem>
+            </itemizedlist>
+            <para>There is also a number of areas where people see blockchain as the holy grail and mistakenly think it can be applied to anything from preventing diamond forgeries to solving blood bank reserves inefficiencies.</para>
+            <para>As a general rule, whenever there is a part of the system that can not be put <quote>on the blockchain</quote>, for example physical assets, or 3rd party IT systems, a blockchain solution is unlikely to work as information can be changed easily outside the blockchain.</para>
+            
+        </section>
+        <section><title>Blockchain challenges</title>
+            <para>There are currently a number of fundamental challenges with blockchain based distributed ledgers, particularly around scalability and privacy of information on a public blockchain (many of these are resolved in a private blockchain systems).</para>
+            <para>The <emphasis>scalability challenges</emphasis> are numerous - the transaction limits for blockchain based systems are low (20 per second for Ethereum, a common next generation blockchain system), the energy requirement for proof of work based consensus systems is huge (the Bitcoin network is estimated to use as much energy as the republic of Ireland), although distributed amongst many parties, the requirement for each node to hold a copy of the full ledger means the cost of storing data on the blockchain is computationally high (although this is mitigated by other distributed storage systems such as IPFS).</para>
+            <para><emphasis>Privacy challenges</emphasis> exist as a result of each node holding a copy of the ledger – all transactions are visible to all parties currently unless encryption is used on the data.  The immutability of the blockchain also raises a potential legislative challenge around the European “right to be forgotten”.  How do you erase records on the blockchain?</para>
+            <para>Due to the above concerns, usually the blockchain stores just a hash – a signature
+                of the transaction or information and the private information is stored separately
+                in a wallet and protected by a private key. This is turn means that if a private key
+                is lost, it makes it impossible to verify any previous or future information for
+                that key.</para>
+            <para>Distributed ledger can only be used to verify the information on the blockchain.
+                If the data is falsified or tampered with before or outside of blockchain, a
+                distributed ledger can only verify that the data is not on the ledger. An example
+                here is diamonds and Everledger. Everledger takes several measurements of the
+                diamonds (the way it is cut, the colour, size etc) and puts on the distributed
+                ledger. If the diamond is lost or stolen and surfaces ever again, it can be easily
+                identified by taking the measurements again and comparing the database stored on the
+                distributed ledger. This parallel verifiable digital certification on the blockchain
+                can assure buyers and sellers of the provenance of the item.</para>
+            <para>Unfortunately, all it takes for a savvy thief to avoid this is to change the
+                qualities of the diamond slightly – in the process the diamond might lose some
+                value, but it is very likely that a thief will prefer that to getting caught. To sum
+                up and generalise this issue, any inputs or outputs that are not on the blockchain
+                are vulnerable hence the movement to smart contracts and trying to do as much as
+                possible inside the blockchain.</para>
+            <para>More research and good education for decision makers is key here – this will
+                prevent using blockchain where it is not appropriate – for example where data
+                changes often, or high performance or efficiency is required. Many of these
+                difficulties are the subject of active research projects, and in the UK EPSRC are
+                launching a call this summer to support the research further with up to 10 small
+                scale project grants with a total of £3M.</para>
+        </section>
+        <section>
+            <title>The opportunity for distributed ledgers</title>
+            <para>Despite all the identified challenges, the opportunities for distributed ledgers
+                are potentially huge. Systems such as Ethereum, Eris, NXT, R3CEV, with integrated
+                smart contracts offer the ability to place complex business logic on a public or
+                private system where they can be triggered by transactions – contract signing,
+                approval of work, external events etc.</para>
+            <para>The most direct beneficiary of distributed ledgers technologies are the platform
+                developers (initially developing the private blockchain solutions) and the
+                application developers. In common with many open source companies, the platform
+                business model is to sell proprietary value around an open source core. One
+                analogous example is Red Hat – a linux distribution provider that offers their core
+                product free of charge and then offers consultancy, integration and development
+                services to enterprises – recently they were valued at $2B.</para>
+            <para>Assuming there is large scale adoption, application developers stand to create
+                value in the same way that the app ecosystem has developed on the Apple and Android
+                mobile platforms.</para>
+            <para>Distributed ledgers allow for complex business processes between parties who do
+                not implicitly trust each other to be automated and hence significant cost savings
+                to be achieved in many sectors. The classic example is financial instrument trade
+                reconciliation but supply chain is another commonly talked about use case. In many
+                of the use cases, the core focus is about cost reduction through the removal of
+                unwanted middlemen or through the reduction of duplicated effort across untrusted
+                parties. Distributed ledgers may also improve transparency and efficiency, by
+                ensuring that regulators and other third parties have full, real time views of
+                transactions.</para>
+<section>
+    <title>Smart contracts and Distributed Autonomous Organisations</title>
+    <para>Smart contracts are beyond the scope of this short presentation, but many in the world of blockchain speak about distributed autonomous organisations (DAO), written in code and deployed on the blockchain these lend themselves strongly to new business structures or digitisation of e.g. cooperatives.  How these will develop is unknown at this point, but initial DAO’s have raised millions of pounds in blockchain crowdsales.</para>
+                <para>An example of that is Ethereum, where any computation cost can be covered by
+                    spending a virtual currency – Ether. Software developers wishing to execute
+                    their programs on Ethereum network can choose to outright buy the Ether
+                    computing units or provide the computational resources themselves and even sell
+                    the excess power in exchange for Ether/money. Such an infrastructure is somewhat
+                    similar to cloud services provided by Amazon or Google, where the price is set
+                    by the factors such as electricity costs and demand, but with distributed
+                    ledger, it is much more fair to smaller players and there is no single entity
+                    that can control the network and switch off an application.</para>
+                <para>The existence of such networks enables the execution of "Smart Contracts" -
+                    autonomous code running on the blockchain (as opposed to a single machine).
+                    Given certain conditions, the code can execute automatically. </para>
+                <para>A simple example here is bond coupon payment – in a typical bond issue, the
+                    buyers buy the bond for 100% of the price and the issuer repay the bond in
+                    instalments.</para>
+                <para>Traditionally this involves issuing paper certificates of bond ownership and
+                    manually sending money via cheque or bank transfer every month and keeping track
+                    of what's been repaid etc. Assuming that all the participants – bond issuer and
+                    the buyers are also participating in the same distributed ledger network that is
+                    capable of executing smart contracts and sending virtual currency, the process
+                    can be simplified vastly, possibly even removing the need for intermediaries
+                    such as banks (for sending money) and law firms (for writing up the contracts).
+                    In such a scenario a bond issuer, would issue a smart contract to be viewed,
+                    audited, verified and accepted by the buyers and upon accepting, the funds would
+                    be automatically transferred to the issuer. Likewise every instalment the issuer
+                    would automatically pay back the coupon payments.</para>
+                <para>Smart contracts can enable a whole range of scenarios, from distributing aid
+                    money, through voting, secure communications and probably a number of areas that
+                    have not been discovered yet. Still the challenges described above
+                    remain.</para>
+                <para>The successful exploitation of smart contracts requires solving the technical
+                    challenges, but also changing laws and regulation and ensuring that the
+                    disruption caused by the automation has a net positive effect on societies and
+                    the economy.</para>
+
+</section>
+        </section>
    
 
     </section>
@@ -99,10 +220,19 @@
                 good fit and the following setup more accurately depicts the needs and wants of the
                 IT managers at the financial institutions that we talked to:</para>
             <itemizedlist>
-                <listitem><para>Digital Ocean Virtual Machines running CentOS Linux. No special requirements here, as long as the Operating System is capable or running Java</para>
-                    <para>Possible environment where this proof of concept can run (with slight modifications): raw Linux Debian or Ubuntu, Linux on top of Docker, Amazon AWS, Azure etc.</para></listitem>
-                <listitem><para>Java Runtime Environment 8. We opted for Oracle as this caused least amount of problems and mimics the bank environments that we know of. We are not using any specific version 8 features so this could be downgraded to version 6.</para></listitem>
-                <listitem><para>Marklogic. It is being described as the enterprise noSQL database, has excellent XML
+                <listitem><para>Operating System: Digital Ocean Virtual Machines running CentOS 7 Linux. No special
+                        requirements here, as long as the Operating System is capable or running
+                        Java. </para>
+                    <para>Possible environments where this proof of concept can run (with slight
+                        modifications) are: raw Linux Debian or Ubuntu, Linux on top of Docker,
+                        Amazon AWS, Azure etc.</para></listitem>
+                <listitem><para>Blockchain and "glue" code - Java on Java Runtime Environment 8. We opted for Oracle as this
+                        caused least amount of problems and mimics the bank environments that we
+                        know of. We are not using any specific version 8 features so this could be
+                        downgraded to version 6. As discussed earlier implementation for other
+                        platforms and languages are possible - for example, we have started our
+                        proof of concept using Python and most of Bitcoin code is written in C. </para></listitem>
+                <listitem><para>Marklogic 8. It is being described as the enterprise noSQL database, has excellent XML
                         technologies support, has replication features that we needed to implement
                         anyway. Having said that, is it possible to use another data persistence
                         mechanism, with additional work.</para></listitem>
@@ -117,9 +247,22 @@
                 respectively.</para>
             <para>The minimum setup is a single node and there is no theoretical limit to the
                 maximum amount of nodes, although some steps, such as reaching consensus within the
-                network will take longer as the network size increases.</para>
+                network will take longer as the network size increases, </para>
         </section>
     </section>
+    <section>
+        <title>Sample operations</title>
+        <section>
+            <title>Adding a new transaction</title>
+            <para></para>
+        </section>
+        <section>
+            <title>Verifying the business rules of a transaction</title>
+            <para></para>
+        </section>
+        
+    </section>
+    
     <section>
         <title>Summary and the future</title>
         <para>We have showed that XML is still a good fit for business as usual activities such as
@@ -129,6 +272,8 @@
         <para>The future steps in this area will largely be market driven, possible next steps
             include open sourcing some or all of the blockchain code for the community to use and
             evolving the blockchain code to enable distributed,verifiable code execution. Such a
-            development would then allow applications such as smart contracts</para>
+            development would then allow applications such as smart contracts and autonomous
+            distributed organisations, which are a bit beyond the scope of this presentation, but we
+            are more than happy to discuss them.</para>
     </section>
 </article>
