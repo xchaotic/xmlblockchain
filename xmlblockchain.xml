@@ -247,7 +247,15 @@
                 respectively.</para>
             <para>The minimum setup is a single node and there is no theoretical limit to the
                 maximum amount of nodes, although some steps, such as reaching consensus within the
-                network will take longer as the network size increases, </para>
+                network will take longer as the network size increases.</para>
+            <para>To accurately mimic a realistic setup that could actually reliably work in
+                production for a major financial institution, we have configured a high availability
+                Marklogic cluster, where both the configuration, transactional data and the
+                blockchain itself are protected from failures using Marklogic enterprise features
+                such as clustering and automatic failovers.</para>
+            <para>In addition to that, it possible and very easy to configure additional, automatic
+                cluster replication, to ensure additional availability in different data centres or
+                different time zones.</para>
         </section>
     </section>
     <section>
