@@ -269,8 +269,14 @@
                         and slash in half the resource usage for signing the messages. This still
                         results in more than sufficient security of the blockchain due to the
                         multiplication effects of adding more transactions.</para></listitem>
-            <listitem><para>Ability to disable coin mining. In a private blockchain setup </para></listitem>
-            <listitem><para></para></listitem>
+            <listitem><para>Ability to disable coin mining. In a private blockchain setup it is unnecessary to reward
+                        participants for signing the messages. In this particular example it is
+                        simply a regulatory requirement.</para>
+                    <para>By removing the coin mining parts, we are again massively reducing
+                        computational waste of calculating who gets the reward and the waste of
+                        discarding any computations of those who don't get the reward.</para></listitem>
+            <listitem><para>Using ethnographic research to avoid typical human biases against entropy.</para>
+                    <para>Using tested and proven </para></listitem>
         </itemizedlist></section>
     </section>
     <section>
