@@ -250,13 +250,28 @@
                 network will take longer as the network size increases.</para>
             <para>To accurately mimic a realistic setup that could actually reliably work in
                 production for a major financial institution, we have configured a high availability
-                Marklogic cluster, where both the configuration, transactional data and the
+                MarkLogic cluster, where both the configuration, transactional data and the
                 blockchain itself are protected from failures using Marklogic enterprise features
                 such as clustering and automatic failovers.</para>
             <para>In addition to that, it possible and very easy to configure additional, automatic
                 cluster replication, to ensure additional availability in different data centres or
                 different time zones.</para>
         </section>
+        <section><title>The Stone Circle algorithm</title>
+            <para>Kode1100 blockchain proof of concept uses internally developed algorithm called <emphasis>The Stone Circle</emphasis> for generating hashes, new block in the blockchain and verifying hte authenticity of the messages.</para>
+            <para><emphasis>The Stone Circle</emphasis> algorithm is a proprietary private consensus algorithm that helps prove a node is in fact one of the trusted delegate node such that it helps prevent man in the middle attacks</para>
+        <para>The basic cryptography is based on the original bitcoin protocol (as described in the Bitcoin research paper by Satoshi Nakamoto) with a number of adjustments and improvements. That basic cryptography is using well understood and widely used elliptical curve mathematics and prime number factoring to make any attempts at forging mathematically impossible using current computer technology.</para>
+        <para>The improvement in the algorithm, include but are not limited to the following:</para>
+        <itemizedlist>
+            <listitem><para>Adjustable difficulty of the hashing function strength. In bitcoin and pretty much all blockchain solutions to date, the security and immutability of the blockchain signature comes with a significant computational cost of having to run hashing functions multiple times (and often discard the results due to race conditions)</para>
+                    <para>The stone circle algorithm allows using different hashing implementations,
+                        for example SHA-256 instead of SHA-512 to effectively double the performance
+                        and slash in half the resource usage for signing the messages. This still
+                        results in more than sufficient security of the blockchain due to the
+                        multiplication effects of adding more transactions.</para></listitem>
+            <listitem><para>Ability to disable coin mining. In a private blockchain setup </para></listitem>
+            <listitem><para></para></listitem>
+        </itemizedlist></section>
     </section>
     <section>
         <title>Sample operations</title>
@@ -268,7 +283,10 @@
             <title>Verifying the business rules of a transaction</title>
             <para></para>
         </section>
-        
+        <section>
+            <title>Verifying the hash for a given file</title>
+            <para></para>
+        </section>
     </section>
     
     <section>
