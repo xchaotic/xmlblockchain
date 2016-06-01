@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cme:FpML xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:cme="http://www.cmegroup.com/otc-clearing/confirmation" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+	<clearingConfirmed fpmlVersion="5-0">
+		<header>
+			<messageId messageIdScheme="cme_message_id">1242553860</messageId>
+			<sentBy messageAddressScheme="cme_clearingorg_id">CME</sentBy>
+			<sendTo messageAddressScheme="cme_firm_id">Firm</sendTo>
+			<sendTo messageAddressScheme="cme_exchange_id">CME</sendTo>
+			<creationTimestamp>2014-10-03T07:42:36-05:00</creationTimestamp>
+		</header>
+		<trade>
+			<tradeHeader xsi:type="cme:CMETradeHeader" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<partyTradeIdentifier>
+					<partyReference href="clearing_service"/>
+					<tradeId tradeIdScheme="cme_trade_id">2553860</tradeId>
+					<tradeId tradeIdScheme="client_trade_id">542E99BB1464001F</tradeId>
+					<tradeId tradeIdScheme="platform_trade_id">FIT:20141003:3739:25:50019:1</tradeId>
+					<tradeId tradeIdScheme="block_trade_id">FIT:20141003:3739:25:50019</tradeId>
+				</partyTradeIdentifier>
+				<partyTradeInformation>
+					<partyReference href="clearing_firm"/>
+					<accountReference href="account1"/>
+					<relatedParty>
+						<partyReference href="trade_source"/>
+						<role>InputSource</role>
+					</relatedParty>
+					<category categoryScheme="cme_origin_code">HOUS</category>
+				</partyTradeInformation>
+				<tradeDate>2014-10-03</tradeDate>
+				<clearedDate>2014-10-03</clearedDate>
+				<cme:originatingEvent>NEW_TRADE</cme:originatingEvent>
+				<cme:status>CLEARED</cme:status>
+				<cme:universalSwapIdentifier>
+					<cme:issuer issuerIdScheme="cftc_Namespace">1010000023</cme:issuer>
+					<cme:usi usiScheme="reg_trade_id">CCCIRS25</cme:usi>
+				</cme:universalSwapIdentifier>
+				<cme:creditLimitInformation>
+					<cme:limitApplicable>
+						<cme:level creditLimitLevelScheme="creditLimitLevelScheme">HOUS</cme:level>
+						<cme:limitType creditLimitTypeScheme="http://www.fpml.org/coding-scheme/credit-limit-type">PV01</cme:limitType>
+						<cme:limitAmount>999999999999998980</cme:limitAmount>
+						<cme:amountUtilized>-12088</cme:amountUtilized>
+						<cme:amountRemaining>999999999999986940</cme:amountRemaining>
+						<cme:limitImpactDueToTrade>-30035</cme:limitImpactDueToTrade>
+						<cme:currency currencyScheme="http://www.fpml.org/ext/iso4217-2001-08-15">USD</cme:currency>
+					</cme:limitApplicable>
+				</cme:creditLimitInformation>
+			</tradeHeader>
+			<swap>
+				<swapStream id="floatLeg">
+					<payerPartyReference href="clearing_firm"/>
+					<payerAccountReference href="account1"/>
+					<receiverPartyReference href="clearing_service"/>
+					<calculationPeriodDates id="floatingCalcPeriodDates">
+						<effectiveDate>
+							<unadjustedDate>2014-10-07</unadjustedDate>
+							<dateAdjustments>
+								<businessDayConvention>NONE</businessDayConvention>
+							</dateAdjustments>
+						</effectiveDate>
+						<terminationDate>
+							<unadjustedDate>2015-10-07</unadjustedDate>
+							<dateAdjustments>
+								<businessDayConvention>MODFOLLOWING</businessDayConvention>
+								<businessCentersReference href="floatPrimaryBusinessCenters"/>
+							</dateAdjustments>
+						</terminationDate>
+						<calculationPeriodDatesAdjustments>
+							<businessDayConvention>MODFOLLOWING</businessDayConvention>
+							<businessCentersReference href="floatPrimaryBusinessCenters"/>
+						</calculationPeriodDatesAdjustments>
+						<calculationPeriodFrequency>
+							<periodMultiplier>6</periodMultiplier>
+							<period>M</period>
+							<rollConvention>7</rollConvention>
+						</calculationPeriodFrequency>
+					</calculationPeriodDates>
+					<paymentDates>
+						<calculationPeriodDatesReference href="floatingCalcPeriodDates"/>
+						<paymentFrequency>
+							<periodMultiplier>6</periodMultiplier>
+							<period>M</period>
+						</paymentFrequency>
+						<payRelativeTo>CalculationPeriodEndDate</payRelativeTo>
+						<paymentDatesAdjustments>
+							<businessDayConvention>MODFOLLOWING</businessDayConvention>
+							<businessCenters id="floatPrimaryBusinessCenters">
+								<businessCenter>AUSY</businessCenter>
+							</businessCenters>
+						</paymentDatesAdjustments>
+					</paymentDates>
+					<resetDates id="floatingLegResetDates">
+						<calculationPeriodDatesReference href="floatingCalcPeriodDates"/>
+						<resetRelativeTo>CalculationPeriodStartDate</resetRelativeTo>
+						<fixingDates>
+							<periodMultiplier>0</periodMultiplier>
+							<period>D</period>
+							<businessDayConvention>PRECEDING</businessDayConvention>
+							<businessCenters>
+								<businessCenter>AUSY</businessCenter>
+							</businessCenters>
+							<dateRelativeTo href="floatingLegResetDates"/>
+						</fixingDates>
+						<resetFrequency>
+							<periodMultiplier>6</periodMultiplier>
+							<period>M</period>
+						</resetFrequency>
+						<resetDatesAdjustments>
+							<businessDayConvention>MODFOLLOWING</businessDayConvention>
+							<businessCentersReference href="floatPrimaryBusinessCenters"/>
+						</resetDatesAdjustments>
+					</resetDates>
+					<calculationPeriodAmount>
+						<calculation>
+							<notionalSchedule>
+								<notionalStepSchedule>
+									<initialValue>345000000.00</initialValue>
+									<currency>AUD</currency>
+								</notionalStepSchedule>
+							</notionalSchedule>
+							<floatingRateCalculation>
+								<floatingRateIndex>AUD-BBR-BBSW</floatingRateIndex>
+								<indexTenor>
+									<periodMultiplier>6</periodMultiplier>
+									<period>M</period>
+								</indexTenor>
+							</floatingRateCalculation>
+							<dayCountFraction>ACT/365.FIXED</dayCountFraction>
+						</calculation>
+					</calculationPeriodAmount>
+					<cashflows>
+						<cashflowsMatchParameters>true</cashflowsMatchParameters>
+						<paymentCalculationPeriod>
+							<adjustedPaymentDate>2015-04-07</adjustedPaymentDate>
+							<calculationPeriod>
+								<adjustedStartDate>2014-10-07</adjustedStartDate>
+								<adjustedEndDate>2015-04-07</adjustedEndDate>
+								<notionalAmount>345000000.00</notionalAmount>
+								<floatingRateDefinition>
+									<rateObservation>
+										<adjustedFixingDate>2014-10-07</adjustedFixingDate>
+										<observedRate>0</observedRate>
+									</rateObservation>
+								</floatingRateDefinition>
+							</calculationPeriod>
+						</paymentCalculationPeriod>
+						<paymentCalculationPeriod>
+							<adjustedPaymentDate>2015-10-07</adjustedPaymentDate>
+							<calculationPeriod>
+								<adjustedStartDate>2015-04-07</adjustedStartDate>
+								<adjustedEndDate>2015-10-07</adjustedEndDate>
+								<notionalAmount>345000000.00</notionalAmount>
+								<floatingRateDefinition>
+									<rateObservation>
+										<adjustedFixingDate>2015-04-07</adjustedFixingDate>
+										<observedRate>0</observedRate>
+									</rateObservation>
+								</floatingRateDefinition>
+							</calculationPeriod>
+						</paymentCalculationPeriod>
+					</cashflows>
+				</swapStream>
+				<swapStream id="fixedLeg">
+					<payerPartyReference href="clearing_service"/>
+					<receiverPartyReference href="clearing_firm"/>
+					<receiverAccountReference href="account1"/>
+					<calculationPeriodDates id="fixedCalcPeriodDates">
+						<effectiveDate>
+							<unadjustedDate>2014-10-07</unadjustedDate>
+							<dateAdjustments>
+								<businessDayConvention>NONE</businessDayConvention>
+							</dateAdjustments>
+						</effectiveDate>
+						<terminationDate>
+							<unadjustedDate>2015-10-07</unadjustedDate>
+							<dateAdjustments>
+								<businessDayConvention>MODFOLLOWING</businessDayConvention>
+								<businessCentersReference href="fixedPrimaryBusinessCenters"/>
+							</dateAdjustments>
+						</terminationDate>
+						<calculationPeriodDatesAdjustments>
+							<businessDayConvention>MODFOLLOWING</businessDayConvention>
+							<businessCentersReference href="fixedPrimaryBusinessCenters"/>
+						</calculationPeriodDatesAdjustments>
+						<calculationPeriodFrequency>
+							<periodMultiplier>6</periodMultiplier>
+							<period>M</period>
+							<rollConvention>7</rollConvention>
+						</calculationPeriodFrequency>
+					</calculationPeriodDates>
+					<paymentDates>
+						<calculationPeriodDatesReference href="fixedCalcPeriodDates"/>
+						<paymentFrequency>
+							<periodMultiplier>6</periodMultiplier>
+							<period>M</period>
+						</paymentFrequency>
+						<payRelativeTo>CalculationPeriodEndDate</payRelativeTo>
+						<paymentDatesAdjustments>
+							<businessDayConvention>MODFOLLOWING</businessDayConvention>
+							<businessCenters id="fixedPrimaryBusinessCenters">
+								<businessCenter>AUSY</businessCenter>
+							</businessCenters>
+						</paymentDatesAdjustments>
+					</paymentDates>
+					<calculationPeriodAmount>
+						<calculation>
+							<notionalSchedule>
+								<notionalStepSchedule>
+									<initialValue>345000000.00</initialValue>
+									<currency>AUD</currency>
+								</notionalStepSchedule>
+							</notionalSchedule>
+							<fixedRateSchedule>
+								<initialValue>0.03852</initialValue>
+							</fixedRateSchedule>
+							<dayCountFraction>ACT/365.FIXED</dayCountFraction>
+						</calculation>
+					</calculationPeriodAmount>
+					<cashflows>
+						<cashflowsMatchParameters>true</cashflowsMatchParameters>
+						<paymentCalculationPeriod>
+							<adjustedPaymentDate>2015-04-07</adjustedPaymentDate>
+							<calculationPeriod>
+								<adjustedStartDate>2014-10-07</adjustedStartDate>
+								<adjustedEndDate>2015-04-07</adjustedEndDate>
+								<notionalAmount>345000000.00</notionalAmount>
+								<fixedRate>0.03852</fixedRate>
+							</calculationPeriod>
+						</paymentCalculationPeriod>
+						<paymentCalculationPeriod>
+							<adjustedPaymentDate>2015-10-07</adjustedPaymentDate>
+							<calculationPeriod>
+								<adjustedStartDate>2015-04-07</adjustedStartDate>
+								<adjustedEndDate>2015-10-07</adjustedEndDate>
+								<notionalAmount>345000000.00</notionalAmount>
+								<fixedRate>0.03852</fixedRate>
+							</calculationPeriod>
+						</paymentCalculationPeriod>
+					</cashflows>
+				</swapStream>
+				<additionalPayment>
+					<payerPartyReference href="clearing_service"/>
+					<receiverPartyReference href="clearing_firm"/>
+					<paymentAmount>
+						<currency>AUD</currency>
+						<amount>9586.00</amount>
+					</paymentAmount>
+					<paymentDate>
+						<unadjustedDate>2014-10-08</unadjustedDate>
+						<dateAdjustments>
+							<businessDayConvention>MODFOLLOWING</businessDayConvention>
+							<businessCenters>
+								<businessCenter>AUSY</businessCenter>
+							</businessCenters>
+						</dateAdjustments>
+					</paymentDate>
+					<paymentType>UPFRONT_FEE</paymentType>
+				</additionalPayment>
+			</swap>
+		</trade>
+		<party id="clearing_firm">
+			<partyId partyIdScheme="clearing_member_firms">Firm</partyId>
+		</party>
+		<party id="clearing_service">
+			<partyId>CME</partyId>
+		</party>
+		<party id="trade_source">
+			<partyId>PartyID</partyId>
+		</party>
+		<account id="account1">
+			<accountId accountIdScheme="clearing_firm_accounts">Account-Receiving</accountId>
+			<servicingParty href="clearing_firm"/>
+		</account>
+	</clearingConfirmed>
+</cme:FpML>
